@@ -1,0 +1,34 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 3,
+  "minReplicas": 2,
+  "maxReplicas": 5,
+  "workers": 1,
+  "routes": {
+    "status": {
+      "path": "/_v/status/:code",
+      "public": true
+    },
+    "productList": {
+      "path": "/_v/preorder/list",
+      "public": true
+    },
+    "productDetail": {
+      "path": "/_v/preorder_detail/:text",
+      "public": true
+    },
+    "category_tree": {
+      "path": "/_v/getcategoryUrl/:text",
+      "public": true
+    },
+    "stripe": {
+      "path": "/_v/get_strip_che/:text",
+      "public": true
+    },
+    "treviPay": {
+      "path": "/_v/treviPayget/:text",
+      "public": true
+    }
+  }
+}
