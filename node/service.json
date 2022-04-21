@@ -29,6 +29,10 @@
     "treviPay": {
       "path": "/_v/treviPayget/:text",
       "public": true
+    },
+    "brand": {
+      "path": "/_v/get_branddata/:text",
+      "public": true
     }
   }
 }

@@ -6,6 +6,7 @@ import { status } from './middlewares/status'
 import { list,detail } from './middlewares/products'
 import { preOrderPayment } from './middlewares/payment'
 import { customer_list } from './middlewares/customer_list'
+import { getBrand } from './middlewares/brand'
 import { getCategoryTree } from './middlewares/products'
 import { validate } from './middlewares/validate'
 // import { CronJob } from 'cron';
@@ -74,6 +75,10 @@ export default new Service({
     }),
     treviPay: method({
       GET: [customer_list],
+    }),
+
+    brand: method({
+      GET: [getBrand],
     })
   },
 })

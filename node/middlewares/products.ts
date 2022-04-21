@@ -63,9 +63,9 @@ const productList = await Promise.all(dataCL.map(async (element: any) => {
 
 
   let re = /\./gi;
-           const text= textt.replace(re,"/");
+   const text= textt.replace(re,"/");
   const url=`https://whola.vtexcommercestable.com.br${text}`
-  
+
 
 const data=findNestedObj(dataCL, 'url', url);
 
