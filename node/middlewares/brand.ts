@@ -18,10 +18,18 @@ const data=dataCL.find((element: any) => {
  return element.name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()==key
 
 });
-console.log(data)
+
+console.log(data.id)
+const url2=`api/dataentities/BD/search?brandId=${data.id}&_fields=_all`
+  const BrandData=await nameClassClient.productlist(url2);
+   const BrandDataNew={...data, ...BrandData[0]};
+
+   console.log(BrandDataNew);
+
+
   ctx.status = 200
   ctx.body = {
-    data
+    BrandDataNew
   }
  await next()
 }

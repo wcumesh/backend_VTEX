@@ -31,7 +31,7 @@
       "public": true
     },
     "brand": {
-      "path": "/_v/get_branddata/:text",
+      "path": "/_v/get_brands_data/:text",
       "public": true
     }
   }
